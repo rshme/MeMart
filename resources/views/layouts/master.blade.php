@@ -21,6 +21,7 @@
 @include('layouts.partials.footer')
 
 <script src="{{ asset('js/app.js')  }}"></script>
+<script src="{{ asset('js/swal.js')  }}"></script>
 <script src="{{ asset('vendor/ChartJS/Chart.min.js') }}"></script>
 <script src="{{ asset('js/script.js')  }}"></script>
 @stack('js')
