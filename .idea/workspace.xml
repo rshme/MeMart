@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cff567a9-8936-4572-b2d5-261770b7b754" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/voyager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_035346_create_profits_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_035346_create_profits_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_035444_create_criteria_parents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_035444_create_criteria_parents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_035718_create_criteria_parent_incomes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_035718_create_criteria_parent_incomes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_040053_create_criteria_others_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_040053_create_criteria_others_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CriteriaOther.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CriteriaOther.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CriteriaParent.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CriteriaParent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CriteriaParentIncome.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CriteriaParentIncome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/chart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/chart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/leaderboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/leaderboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +160,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -230,6 +215,7 @@
       <workItem from="1605076642312" duration="3666000" />
       <workItem from="1605150191154" duration="3545000" />
       <workItem from="1605172683821" duration="2794000" />
+      <workItem from="1605234093494" duration="987000" />
     </task>
     <servers />
   </component>
@@ -245,6 +231,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="503" y="321" width="349" height="159" key="NewPhpFileDialog/0.30.1366.738@0.30.1366.738" timestamp="1605175120651" />
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor" timestamp="1605234652531">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1605234652531" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605175571275">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
