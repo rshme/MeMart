@@ -54,7 +54,7 @@
 
         @else
         <div class="col-12">
-            <h3 class="text-center">Tidak ada data untuk saat ini</h3>
+            <h3 class="text-center">No data available at this time</h3>
         </div>
     @endif
 </div>

@@ -15,7 +15,7 @@ class CreateCriteriaParentsTable extends Migration
     {
         Schema::create('criteria_parents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('value');
+            $table->string('type');
             $table->float('score');
             $table->timestamps();
         });

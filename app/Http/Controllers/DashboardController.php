@@ -17,13 +17,15 @@ class DashboardController extends Controller
         $bigProfit = ProfitStudent::where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->first()['detail_profit'];
 
         // get top 3 reseller
-        $achievement = ProfitStudent::where('detail_profit', '<=', $bigProfit)->where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->take(3)->get();
-
         $myacv = false;
 
-        foreach ($achievement as $acv){
-            if($acv->student_id == auth()->user()->student->id){
-                $myacv = true;
+        if($bigProfit){
+            $achievement = ProfitStudent::where('detail_profit', '<=', $bigProfit)->where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->take(3)->get();
+
+            foreach ($achievement as $acv){
+                if($acv->student_id == auth()->user()->student->id){
+                    $myacv = true;
+                }
             }
         }
 

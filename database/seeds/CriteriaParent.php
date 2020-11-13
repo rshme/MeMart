@@ -13,10 +13,10 @@ class CriteriaParent extends Seeder
     public function run()
     {
         $parents = [
-            ['value' => 'Yatim Piatu', 'score' => '1.0'],
-            ['value' => 'Yatim', 'score' => '0.7'],
-            ['value' => 'Piatu', 'score' => '0.5'],
-            ['value' => 'Lengkap', 'score' => '0.3'],
+            ['type' => 'Yatim Piatu', 'score' => '1.0'],
+            ['type' => 'Yatim', 'score' => '0.7'],
+            ['type' => 'Piatu', 'score' => '0.5'],
+            ['type' => 'Lengkap', 'score' => '0.3'],
         ];
 
         foreach($parents as $parent){

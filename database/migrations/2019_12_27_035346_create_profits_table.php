@@ -15,7 +15,7 @@ class CreateProfitsTable extends Migration
     {
         Schema::create('profits', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('value');
+            $table->string('amount');
             $table->float('score');
             $table->timestamps();
         });

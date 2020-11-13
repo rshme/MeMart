@@ -13,10 +13,10 @@ class CriteriaParentIncome extends Seeder
     public function run()
     {
         $parentIncomes = [
-            ['value' => '< Rp.500.000', 'score' => '1.0'],
-            ['value' => 'Rp.500.000 - Rp.1.000.000', 'score' => '0.7'],
-            ['value' => 'Rp.500.000 - Rp.1.000.000', 'score' => '0.5'],
-            ['value' => '> Rp.1.000.000', 'score' => '0.3'],
+            ['amount' => '< Rp.500.000', 'score' => '1.0'],
+            ['amount' => 'Rp.500.000 - Rp.1.000.000', 'score' => '0.7'],
+            ['amount' => 'Rp.500.000 - Rp.1.000.000', 'score' => '0.5'],
+            ['amount' => '> Rp.1.000.000', 'score' => '0.3'],
         ];
 
         foreach($parentIncomes as $incomes){

@@ -15,7 +15,7 @@ class CreateCriteriaParentIncomesTable extends Migration
     {
         Schema::create('criteria_parent_incomes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('value');
+            $table->string('amount');
             $table->float('score');
             $table->timestamps();
         });

@@ -13,9 +13,9 @@ class CriteriaOther extends Seeder
     public function run()
     {
         $others = [
-            ['value' => 'Korban Bencana', 'score' => '1.0'],
-            ['value' => 'Kelainan Fisik', 'score' => '0.7'],
-            ['value' => 'Normal', 'score' => '0.5'],
+            ['type' => 'Korban Bencana', 'score' => '1.0'],
+            ['type' => 'Kelainan Fisik', 'score' => '0.7'],
+            ['type' => 'Normal', 'score' => '0.5'],
         ];
 
         foreach($others as $other){

@@ -86,6 +86,7 @@
                 success: function(res){
                     $('#leaderboard-content').html(res);
 
+                    // get data for chart
                     $.ajax({
                         url: "{{ route('get.chart') }}",
                         success: function(data){
@@ -95,44 +96,52 @@
                                 label.push(value.periode);
                                 dataset.push(value.detail_profit);
                             });
-                            // for chart JS
-                            var ctx = document.getElementById('myChart').getContext('2d');
-                            var myChart = new Chart(ctx, {
-                                type: 'bar',
-                                data: {
-                                    labels: label,
-                                    datasets: [{
-                                        label: 'My Profit',
-                                        data: dataset,
-                                        backgroundColor:[
-                                            '#4e8ef5',
-                                            '#4ef5d4'
-                                        ],
-                                        borderColor:'gray',
-                                        borderWidth:3,
-                                        hoverBorderColor:'black'
-                                    }]
-                                },
-                                options: {
-                                    scales: {
-                                        yAxes: [{
-                                            ticks: {
-                                                beginAtZero: true
-                                            }
+
+                            if(data.length > 0){
+                                // generate chart JS
+                                var ctx = document.getElementById('myChart').getContext('2d');
+                                var myChart = new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: label,
+                                        datasets: [{
+                                            label: 'My Profit',
+                                            data: dataset,
+                                            backgroundColor:[
+                                                '#4e8ef5',
+                                                '#4ef5d4'
+                                            ],
+                                            borderColor:'gray',
+                                            borderWidth:3,
+                                            hoverBorderColor:'black'
                                         }]
                                     },
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero: true
+                                                }
+                                            }]
+                                        },
 
-                                    title:{
-                                        display:true,
-                                        text:'My Profit',
-                                        fontSize:22
-                                    },
+                                        title:{
+                                            display:true,
+                                            text:'My Profit',
+                                            fontSize:22
+                                        },
 
-                                    legend:{
-                                        display:false
+                                        legend:{
+                                            display:false
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            }else{
+                                // remove canvas element
+                                $('canvas#myChart').addClass('d-none');
+                                // show no data message
+                                $('canvas#myChart').siblings('h3').removeClass('d-none')
+                            }
                         }
                     });
                 }
