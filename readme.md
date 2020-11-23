@@ -17,7 +17,7 @@
 	  
  5. Import the database dump inside folder **db-dump** to your database
  6. Change env database with your own configuration
-	 > DB_DATABASE=your_db_name_after_import_db-dump.sql
-DB_USERNAME=your_db_username  
-DB_PASSWORD=your_db_password
+	 > DB_DATABASE=your_db_name_after_import_db-dump.sql <br />
+       DB_USERNAME=your_db_username <br /> 
+       DB_PASSWORD=your_db_password
  7. Run the with command `php artisan serve` and enjoy
