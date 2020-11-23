@@ -1,9 +1,7 @@
 # MeMart
 
 ![MeMart reseller dashboard](https://i.imgur.com/txh5s4B.png)
-**MeMart** is a web application that functions  
-to supervise resellers who work with  
-the **Mimake** minimarket at my school.
+**MeMart** is a web application that functions to supervise resellers who work with the **Mimake** minimarket at my school.
 
 ## Installation Guide
 
