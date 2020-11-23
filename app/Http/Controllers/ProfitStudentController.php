@@ -50,7 +50,7 @@ class ProfitStudentController extends Controller
             return $students->student->fullname;
         })->
         addColumn('profit', function($students){
-            return $students->profit->value;
+            return $students->profit->amount;
         })->addColumn('score', function($students){
            $cop = $students->student->criteria->cop->score;
            $cpi = $students->student->criteria->cpi->score;

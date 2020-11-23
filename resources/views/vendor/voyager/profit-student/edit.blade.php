@@ -43,10 +43,10 @@
                            <div class="form-group col-md-12">
                                <label class="control-label" for="profit_id">Profit</label>
                                <select name="profit_id" id="profit_id" class="form-control select2 select2-hidden-accessible">
-                                   <option value="{{ $data->profit->id }}" selected>{{ $data->profit->value }}</option>
+                                   <option value="{{ $data->profit->id }}" selected>{{ $data->profit->amount }}</option>
                                    @foreach(\App\Profit::all() as $profit)
                                        @if($profit->id !== $data->profit->id)
-                                           <option value="{{ $profit->id }}">{{ $profit->value }}</option>
+                                           <option value="{{ $profit->id }}">{{ $profit->amount }}</option>
                                        @endif
                                    @endforeach
                                </select>

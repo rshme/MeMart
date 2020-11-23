@@ -33,7 +33,7 @@ class DashboardController extends Controller
     }
 
     public function leaderboard(){
-        $now = Date::now()->format('Y-m-d');
+        $now = Date::now()->format('Y-m');
         $data = ProfitStudent::with(['student'])->where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->orderBy('created_at', 'desc')->take(3)->get();
         $id = [];
 
