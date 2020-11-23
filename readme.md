@@ -21,3 +21,9 @@
        DB_USERNAME=your_db_username <br /> 
        DB_PASSWORD=your_db_password
  7. Run the with command `php artisan serve` and enjoy
+
+## Package used
+
+ - [x] Voyager admin panel
+ - [x] Yajra Datatables
+ - [x] Jenssegers  Date
