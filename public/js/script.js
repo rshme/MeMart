@@ -19,7 +19,7 @@ $('body').on('click', '#btn-login', function(e){
         url: target,
         success: function(res){
             $('#modal').modal('show');
-            $('.modal-title').text('App Name');
+            $('.modal-title').text('MeMart');
             $('.modal-body').html(res);
         }
     });
@@ -36,10 +36,10 @@ $('body').on('submit', '#form-login', function(e){
         method:'POST',
         data: form,
         success: function(res){
-            if(res.msg == 'success'){
+            if(res.status_code == 200){
                 Toast.fire({
                     icon: 'success',
-                    title: 'Signed in successfully'
+                    title: res.message
                 });
 
                 $('#modal').modal('hide');
@@ -47,6 +47,15 @@ $('body').on('submit', '#form-login', function(e){
                 setTimeout(() => {
                     window.location.href = '/home';
                 }, 3200);
+            }
+        },
+        error: function(err){
+            if(err.responseJSON.status_code === 401)
+            {
+                Toast.fire({
+                    icon: 'error',
+                    title: err.responseJSON.message
+                });
             }
         }
     });

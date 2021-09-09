@@ -18,10 +18,17 @@ class AuthController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-            return response()->json(['msg' => 'success'], 200);
+            return response()->json([
+                'status_code' => 200,
+                'message' => 'Login Successfully'
+            ], 200);
         }
 
-        return 'gagal login';
+        // if login failed
+        return response()->json([
+            'status_code' => 401,
+            'message' => "Login failed !"
+        ], 401);
     }
 
     public function logout(){

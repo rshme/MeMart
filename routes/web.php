@@ -15,22 +15,31 @@ Route::get('/', function () {
     return view('landing');
 })->name('login')->middleware('guest');
 
-Route::get('/home', 'DashboardController@index')->name('home')->middleware('auth');
+Route::get('/home', 'DashboardController@index')->name('home')->middleware('auth.student');
 
 // endpoint authentication
 Route::get('/login', 'AuthController@getLogin')->name('get.login');
 Route::post('/login', 'AuthController@postLogin')->name('post.login');
 Route::post('/logout', 'AuthController@logout')->name('logout.user');
 
-// endpoint to get leaderboard
-Route::get('/leaderboard', 'DashboardController@leaderboard')->name('get.leaderboard');
+Route::get('force-logout', function(){
+    \Auth::logout();
 
-//endpoint chart
-Route::get('/myprofit', 'DashboardController@profit')->name('get.profit');
-Route::get('/myprofit/chart', 'DashboardController@chart')->name('get.chart');
+    return redirect()->to('/');
+});
 
-// show student
-Route::get('leaderboard/{id}/show', 'DashboardController@showStudent')->name('profit_student.show');
+// wrap inside student middleware
+Route::group(['middleware' => 'auth.student'], function(){
+    // endpoint to get leaderboard
+    Route::get('/leaderboard', 'DashboardController@leaderboard')->name('get.leaderboard');
+
+    //endpoint chart
+    Route::get('/myprofit', 'DashboardController@profit')->name('get.profit');
+    Route::get('/myprofit/chart', 'DashboardController@chart')->name('get.chart');
+
+    // show student
+    Route::get('leaderboard/{id}/show', 'DashboardController@showStudent')->name('profit_student.show');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     // overriding routes

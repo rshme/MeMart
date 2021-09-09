@@ -14,19 +14,19 @@ class DashboardController extends Controller
         $now = Date::now()->format('Y-m');
 
         //get the big profit
-        $bigProfit = ProfitStudent::where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->first()['detail_profit'];
+        $bigProfit = ProfitStudent::where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->first();
 
         // get top 3 reseller
         $myacv = false;
 
         if($bigProfit){
-            $achievement = ProfitStudent::where('detail_profit', '<=', $bigProfit)->where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->take(3)->get();
+            $achievement = ProfitStudent::where('detail_profit', '<=', $bigProfit['detail_profit'])->where('periode', 'LIKE', '%'.$now.'%')->orderBy('detail_profit', 'desc')->take(3)->get();
 
-            foreach ($achievement as $acv){
+            $myacv = $achievement->filter(function($acv){
                 if($acv->student_id == auth()->user()->student->id){
-                    $myacv = true;
+                    return true;
                 }
-            }
+            });
         }
 
         return view('pages.dashboard', compact('myacv'));
